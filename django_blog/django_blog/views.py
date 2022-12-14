@@ -1,19 +1,13 @@
-from pipes import Template
-from django.http import HttpResponse
-from django.template import Template, Context
 
-def saludo(request):
 
-    nombre = "juan"
+from django.shortcuts import render
 
-    doc_externo = open('C:/Users/Dario/Desktop/PROYECTO_FINAL/Blog-python-django/django_blog/templates/index.html')
+def inicio(request):
+    template_name= "index.html"
+    contexto={
 
-    objetotipotemplate = Template(doc_externo.read())
+    }
+    return render(request, template_name, contexto)
+   
 
-    doc_externo.close()
-
-    ctx = Context({"nombre_persona":nombre})
-
-    documento = objetotipotemplate.render(ctx)
-
-    return HttpResponse(documento)
+    
