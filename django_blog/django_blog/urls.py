@@ -19,5 +19,9 @@ from .views import inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('inicio/', inicio),
+=======
+    path('inicio/', inicio)
+>>>>>>> 98e87059cf302a8e6eb9fa9ee68fe4ef6e4a73d8
 ]
