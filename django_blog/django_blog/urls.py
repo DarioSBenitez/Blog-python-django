@@ -20,6 +20,7 @@ from .views import login
 from .views import register
 from .views import quienes_somos
 
+
 urlpatterns =[
     path('admin/', admin.site.urls),
     path('inicio/', inicio),
