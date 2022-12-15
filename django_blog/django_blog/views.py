@@ -19,3 +19,10 @@ def register(request):
     contexto={
     }
     return render(request, template_name, contexto)
+
+
+def quienes_somos(request):
+    template_name= "quienes_somos.html"
+    contexto={
+    }
+    return render(request, template_name, contexto)
