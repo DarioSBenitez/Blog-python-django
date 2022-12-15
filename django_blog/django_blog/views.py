@@ -19,3 +19,8 @@ def login(request):
 
     }
     return render(request, "login.html", {})
+
+from django.shortcuts import render
+def noticia(request):
+        contexto={}
+        return render(request, "noticia.html", contexto)
