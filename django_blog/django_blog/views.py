@@ -6,11 +6,13 @@ def inicio(request):
     }
     return render(request, template_name, contexto)
 
-def login1(request):
-    template_name= "login1.html"
+
+def login(request):
+    template_name= "login.html"
     contexto={
     }
     return render(request, template_name, contexto)
+
 
 def register(request):
     template_name= "register.html"
