@@ -27,9 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+from django.urls import reverse_lazy 
 # Application definition
 AUTH_USER_MODEL = 'register.register'
+LOGIN_REDIREC_URL = reverse_lazy ('inicio')
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

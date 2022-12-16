@@ -13,14 +13,14 @@
         <nav class="navbar navbar-dark bg-dark">
             <ul class="nav justify-content-center">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}">INICIO</a>
+                <a class="btn btn-outline-primary px-4" href="http://127.0.0.1:8000/inicio/">INICIO</a>
             </li>
             <a class="nav-link active" aria-current="page" href="#">NUESTRA MISIÓN</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">NOTICIAS/CALENDARIO</a>
             </li>
-            <a class="nav-link active" aria-current="page" href="#">¿QUIÉNES SOMOS?</a>
+            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/quienes_somos/">¿QUIÉNES SOMOS?</a>
             </li>
             <a class="nav-link active" aria-current="page" href="#">CONTACTOS</a>
             </li>
@@ -29,6 +29,9 @@
             </li>
             </li>
             </ul>
+            <span class="nav-item-text px-4"style="color:aliceblue">
+                ONG- Color y alegría.
+            </span>
         </nav>
     <!-- Section: Design Block -->
         <section class="text-center">
@@ -40,7 +43,7 @@
                 <div class="col-lg-8">
                     <h2 class="fw-bold" style="color:aliceblue;">CREAR NUEVO USUARIO</h2>
                     <p class="text-white-50 mb-4">Por favor, ingrese sus datos.</p>
-                    <form>
+                    <form method="get">{% csrf_token %}
                     <!-- 2 column grid layout with text inputs for the first and last names -->
                     <div class="row">
                         <!-- Nombre -->
