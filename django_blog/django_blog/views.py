@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 958d55543e02721f262cd3647debde1e02d26fe7
 from django.shortcuts import render
 
 def inicio(request):
@@ -11,9 +6,6 @@ def inicio(request):
     }
     return render(request, template_name, contexto)
 
-<<<<<<< HEAD
-    
-=======
 
 def login(request):
     template_name= "login.html"
@@ -28,10 +20,3 @@ def register(request):
     }
     return render(request, template_name, contexto)
 
-
-def quienes_somos(request):
-    template_name= "quienes_somos.html"
-    contexto={
-    }
-    return render(request, template_name, contexto)
->>>>>>> 958d55543e02721f262cd3647debde1e02d26fe7

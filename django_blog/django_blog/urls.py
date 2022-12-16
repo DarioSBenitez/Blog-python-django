@@ -18,16 +18,12 @@ from django.urls import path
 from .views import inicio
 from .views import login
 from .views import register
-from .views import quienes_somos
+
 
 
 urlpatterns =[
     path('admin/', admin.site.urls),
     path('inicio/', inicio),
-<<<<<<< HEAD
-=======
     path('login/', login),
     path('register/', register),
-    path('quienes_somos/', quienes_somos),    
->>>>>>> 958d55543e02721f262cd3647debde1e02d26fe7
 ]
