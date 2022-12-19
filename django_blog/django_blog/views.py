@@ -13,6 +13,8 @@ def login(request):
     }
     return render(request, template_name, contexto)
 
+   
+
 
 def register(request):
     template_name= "register.html"
