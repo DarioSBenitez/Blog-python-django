@@ -1,7 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
-class modelo_Principal (models.model):
+class modelo_Principal (models.Model):
     id = models.AutoField(primary_key=True)
     estado = models.BooleanField('Estado', default= True)
     fecha_creacion = models.DateField('Fecha de creacion',auto_now= False, auto_now_add= True)
@@ -23,9 +23,9 @@ def __str__(self):
          return self.nombre
 
 class Autor(modelo_Principal):    
-    nombre = models.CharField('Nombre',max_length=100)
-    apellidos = models.CharField('Apellido',max_length=120)
-    email=models.EmailField('Correo Electronico', max_length=200)
+    nombre_autor = models.CharField('Nombre',max_length=100)
+    apellidos_autor = models.CharField('Apellido',max_length=120)
+    email_auto=models.EmailField('Correo Electronico', max_length=200)
     descripcion= models.TextField('Descripcion')
     
     class Meta:
@@ -33,14 +33,14 @@ class Autor(modelo_Principal):
         verbose_name_plural="Autores"
 
     def __str__ (self):
-        return '{0}, {1}'.format (self. apellidos, self.nombre)
+        return '{0}, {1}'.format (self.apellidos, self.nombre)
 
     class Post (modelo_Principal):
-        titulo=models.CharField ('Titulo del Post',max_length=150, unique=True)
+        titulo_post=models.CharField ('Titulo del Post',max_length=150, unique=True)
         slug=models.CharField('slug', max_length=150, unique=True)
         descripcion =models.TextField('Descripcion')
-        autor=models.Foreignkey('Autor', on_delete=models.CASCADE)
-        categoria=models.Foreignkey ('Categoria', on_delete=models.CASCADE)
+        autor_post=models.ForeignKey('Autor', on_delete=models.CASCADE)
+        categoria_post=models.ForeignKey ('Categoria', on_delete=models.CASCADE)
         contenido=RichTextField()
         imagen=models.ImageField ('Imagen', upload_to= 'categoria/')
         fecha_publicación=models.DateField('Fecha de publicacion')
@@ -54,10 +54,10 @@ class Autor(modelo_Principal):
         return self.titulo
 
     class Contacto (modelo_Principal):
-        nombre=models.CharField('Nombre', max_lenght=100)
-        apellidos=models.CharField('Apellidos', max_lenght=150)
-        correo=models.CharField('Correo Electrónico', max_lenght=200)
-        asunto=models.CharField('Asunto', max_lenght=100)
+        nombre=models.CharField('Nombre', max_length=100)
+        apellidos=models.CharField('Apellidos', max_length=150)
+        correo=models.CharField('Correo Electronico', max_length=200)
+        asunto=models.CharField('Asunto', max_length=100)
         mensaje=models.TextField('Mensaje')
 
         class Meta:
