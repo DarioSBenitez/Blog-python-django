@@ -35,15 +35,15 @@ class Autor(modelo_Principal):
     def __str__ (self):
         return '{0}, {1}'.format (self.apellidos, self.nombre)
 
-        class Post (modelo_Principal):
-            titulo_post=models.CharField ('Titulo del Post',max_length=150, unique=True)
-            slug=models.CharField('slug', max_length=150, unique=True)
-            descripcion =models.TextField('Descripcion')
-            autor_post=models.ForeignKey('Autor', on_delete=models.CASCADE)
-            categoria_post=models.ForeignKey ('Categoria', on_delete=models.CASCADE)
-            contenido=RichTextField()
-            imagen=models.ImageField ('Imagen', upload_to= 'categoria/')
-            fecha_publicación=models.DateField('Fecha de publicacion')
+    class Post (modelo_Principal):
+        titulo_post=models.CharField ('Titulo del Post',max_length=150, unique=True)
+        slug=models.CharField('slug', max_length=150, unique=True)
+        descripcion =models.TextField('Descripcion')
+        autor_post=models.ForeignKey('Autor', on_delete=models.CASCADE)
+        categoria_post=models.ForeignKey ('Categoria', on_delete=models.CASCADE)
+        contenido=RichTextField()
+        imagen=models.ImageField ('Imagen', upload_to= 'categoria/')
+        fecha_publicación=models.DateField('Fecha de publicacion')
 
         
     class Meta:
@@ -64,9 +64,5 @@ class Autor(modelo_Principal):
             verbose_name='Contacto'
             verbose_name_plural='Contactos'
 
-        def __Str__(self):
-<<<<<<< HEAD
+        def __str__(self):
             return self.asunto
-=======
-            return self.asunto
->>>>>>> 190b885b3e8d99ee7adc97bcd16a79a02375bf6f
