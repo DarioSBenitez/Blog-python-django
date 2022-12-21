@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -30,8 +31,10 @@ ALLOWED_HOSTS = []
 # from django.urls import reverse_lazy 
 # Application definition
 AUTH_USER_MODEL = 'register.register'
-# AUTH_USER_MODEL ='noticia.noticia'
+
 LOGIN_REDIRECT_URL =  'inicio'
+LOGOUT_REDIRECT_URL = 'inicio'
+LOGIN_URL = '/login/'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -126,3 +129,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+print(os.path.join(BASE_DIR, "static"))

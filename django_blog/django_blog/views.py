@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.forms  import UserCreationForm
 
 def inicio(request):
     template_name= "index.html"
@@ -16,11 +17,6 @@ def login(request):
    
 
 
-def register(request):
-    template_name= "register.html"
-    contexto={
-    }
-    return render(request, template_name, contexto)
 
 
 def quienes_somos(request):
