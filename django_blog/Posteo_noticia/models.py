@@ -65,4 +65,8 @@ class Autor(modelo_Principal):
             verbose_name_plural='Contactos'
 
         def __Str__(self):
+<<<<<<< HEAD
             return self.asunto
+=======
+            return self.asunto
+>>>>>>> 190b885b3e8d99ee7adc97bcd16a79a02375bf6f

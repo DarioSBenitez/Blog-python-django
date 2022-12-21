@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'register',
-    'noticia',
+    'Posteo_noticia',
+    'login'
     
 ]
 
@@ -130,6 +131,11 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 190b885b3e8d99ee7adc97bcd16a79a02375bf6f
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
