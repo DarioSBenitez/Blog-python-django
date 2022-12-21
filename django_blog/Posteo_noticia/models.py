@@ -15,11 +15,11 @@ class categoria(modelo_Principal):
     nombre = models.CharField('Nombre de categoria',max_length=100, unique=True)
     imagen = models.ImageField('imagen', upload_to= 'categoria/')
 
-class Meta:
-     verbose_name ='Categoria'
-     verbose_name_plural = 'Categorias'
+    class Meta:
+        verbose_name ='Categoria'
+        verbose_name_plural = 'Categorias'
 
-def __str__(self):
+    def __str__(self):
          return self.nombre
 
 class Autor(modelo_Principal):    
@@ -35,15 +35,15 @@ class Autor(modelo_Principal):
     def __str__ (self):
         return '{0}, {1}'.format (self.apellidos, self.nombre)
 
-    class Post (modelo_Principal):
-        titulo_post=models.CharField ('Titulo del Post',max_length=150, unique=True)
-        slug=models.CharField('slug', max_length=150, unique=True)
-        descripcion =models.TextField('Descripcion')
-        autor_post=models.ForeignKey('Autor', on_delete=models.CASCADE)
-        categoria_post=models.ForeignKey ('Categoria', on_delete=models.CASCADE)
-        contenido=RichTextField()
-        imagen=models.ImageField ('Imagen', upload_to= 'categoria/')
-        fecha_publicación=models.DateField('Fecha de publicacion')
+        class Post (modelo_Principal):
+            titulo_post=models.CharField ('Titulo del Post',max_length=150, unique=True)
+            slug=models.CharField('slug', max_length=150, unique=True)
+            descripcion =models.TextField('Descripcion')
+            autor_post=models.ForeignKey('Autor', on_delete=models.CASCADE)
+            categoria_post=models.ForeignKey ('Categoria', on_delete=models.CASCADE)
+            contenido=RichTextField()
+            imagen=models.ImageField ('Imagen', upload_to= 'categoria/')
+            fecha_publicación=models.DateField('Fecha de publicacion')
 
         
     class Meta:
