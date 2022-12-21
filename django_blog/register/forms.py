@@ -17,3 +17,5 @@ class RegistroUsuarioForm(UserCreationForm):
         user.is_staff     = False
         user.save()
         return user
+
+    

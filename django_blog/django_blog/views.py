@@ -24,3 +24,10 @@ def quienes_somos(request):
     contexto={
     }
     return render(request, template_name, contexto)
+
+def post(request):
+    template_name= "post.html"
+    contexto = {
+
+    }
+    return render(request, template_name,contexto)

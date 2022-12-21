@@ -10,6 +10,8 @@ class modelo_Principal (models.Model):
 
 class Meta:
      abstract : True
+def __str__(self):
+    return self.estado
 
 class categoria(modelo_Principal):
     nombre = models.CharField('Nombre de categoria',max_length=100, unique=True)
@@ -42,7 +44,6 @@ class Autor(modelo_Principal):
         autor_post=models.ForeignKey('Autor', on_delete=models.CASCADE)
         categoria_post=models.ForeignKey ('Categoria', on_delete=models.CASCADE)
         contenido=RichTextField()
-        imagen=models.ImageField ('Imagen', upload_to= 'categoria/')
         fecha_publicación=models.DateField('Fecha de publicacion')
 
         
@@ -51,7 +52,7 @@ class Autor(modelo_Principal):
         verbose_name_plural="Posts"
 
     def __str__ (self):
-        return self.titulo
+        return self.titulo_post
 
     class Contacto (modelo_Principal):
         nombre=models.CharField('Nombre', max_length=100)
