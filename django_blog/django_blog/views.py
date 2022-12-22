@@ -8,7 +8,11 @@ def inicio(request):
     return render(request, template_name, contexto)
 
 
-
+def descarga(request):
+    template_name= "descarga.html"
+    contexto={
+    }
+    return render(request, template_name, contexto)
 
    
 

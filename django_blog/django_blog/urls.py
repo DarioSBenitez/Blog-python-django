@@ -2,7 +2,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from django_blog.views import inicio
-from django_blog.views import post,mision,qsomos, contacto
+from django_blog.views import post,mision,qsomos, contacto,descarga
 
 
 from django.contrib.auth import views as auth_views
@@ -19,6 +19,7 @@ urlpatterns = [
     path('mision/', mision, name='mision'),
     path('Quienes_Somos/', qsomos, name='qsomos'),
     path('Contacto/', contacto, name='contacto'),
+    path('descarga/', descarga, name='descarga'),
     
     
     

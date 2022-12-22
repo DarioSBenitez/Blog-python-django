@@ -23,7 +23,7 @@
 
        
     </head>
-    <body style="background-color: skyblue;">
+    <body style="background-color: rgb(171, 197, 245);">
 
 
 
@@ -38,7 +38,7 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'post' %}">Noticias</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'qsomos' %}">¿Quienes Somos?</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contacto' %}">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Descargas</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'descarga' %}">Descargas</a></li>
                         {% if user.is_authenticated %}
 
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'logout' %}">Cerrar sesion</a></li>
@@ -58,8 +58,8 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1><span style="color:rgb(238, 216, 89)">Fundación</span><span style="color:rgb(0, 162, 255)">Color y</span><span style="color:rgb(255, 57, 57)">Alegría<span></h1>
-                            <span class="subheading">ARGENTINA CAPEÓN DE LA COPA DEL MUNDO!!!!!!!!!!!</span>
+                            <h1><span style="color:hsl(28, 67%, 63%)">Fundación</span><span style="color:rgb(0, 162, 255)">Color y</span><span style="color:rgb(255, 57, 57)">Alegría<span></h1>
+                            <span class="subheading">UNA ORGANIZACION A NIVEL MUNDIAL .............</span>
                         </div>
                     </div>
                 </div>
@@ -71,10 +71,10 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.html">
+                        <!-- <a href="post.html"> -->
                             <h2 class="post-title">ARGENTINA CAMPEON MUNDIAL!!!!!!</h2>
                             <h3 class="post-subtitle">DE LA MANO DE LEO MESIIIIIIIII......</h3>
-                        </a>
+                        <!-- </a> -->
                         <!-- <p class="post-meta">
                             Posted by
                             <a href="#!">Start Bootstrap</a>
@@ -122,7 +122,7 @@
                     <!-- Divider-->
                     <hr class="my-4" />
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="https://www.argentina.gob.ar/salud/incucai">ACCEDE AL INCUCAI</a></div>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://twitter.com/?lang=es">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -141,7 +141,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://www.facebook.com">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
@@ -149,7 +149,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="#!">
+                                <a href="https://www.instagram.com/">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
@@ -157,7 +157,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="small text-center text-muted fst-italic">Copyright &copy; Your Website 2022</div>
+                        <div class="small text-center text-muted fst-italic"> <p style="color: black;">  Copy right (2022 - GRUPO 4 - COMISION 3 - INFORMATORIO 2022)</p></div>
                     </div>
                 </div>
             </div>
