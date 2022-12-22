@@ -8,25 +8,37 @@ def inicio(request):
     return render(request, template_name, contexto)
 
 
-def login(request):
-    template_name= "login.html"
-    contexto={
-    }
-    return render(request, template_name, contexto)
+
 
    
 
    
 
 
-def quienes_somos(request):
-    template_name= "quienes_somos.html"
+def mision(request):
+    template_name= "mision.html"
     contexto={
     }
     return render(request, template_name, contexto)
 
 def post(request):
     template_name= "post.html"
+    contexto = {
+
+    }
+    return render(request, template_name,contexto)
+
+
+def qsomos(request):
+    template_name= "qsomos.html"
+    contexto = {
+
+    }
+    return render(request, template_name,contexto)
+
+
+def contacto(request):
+    template_name= "qsomos.html"
     contexto = {
 
     }
